@@ -1,4 +1,3 @@
-# Create-a-malicious-software}
 # Capturador de teclado (Proyecto educativo)
 
 ## 📌 Descripción
