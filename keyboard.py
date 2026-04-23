@@ -1,11 +1,12 @@
-from pynput.keyboard import Listener
+import keyboard
 
-def al_presionar(tecla):
-    with open("log.txt", "a") as archivo:
+def grabar(evento):
+    archivo = open("log.txt", "a")
+    archivo.write(evento.name + " ") # .name es el nombre de la tecla (ej: 'a', 'space')
+    archivo.close()
 
-        archivo.write(f"{tecla} ")
+print("Grabando... Presiona ESC para salir.")
 
-print("Grabando teclas... (Presiona Ctrl+C para salir)")
+keyboard.on_release(callback=grabar)
 
-with Listener(on_press=al_presionar) as l:
-    l.join()
+keyboard.wait('esc')
