@@ -6,5 +6,3 @@ Script básico en Python para registrar pulsaciones de teclado.
 2. Ejecutar: `python main.py`
 3. Los resultados aparecerán en `log.txt`.
 
-## Nota
-Uso exclusivo para pruebas personales y aprendizaje.
