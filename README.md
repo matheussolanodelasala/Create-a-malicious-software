@@ -1,17 +1,10 @@
-# Capturador de teclado (Proyecto educativo)
+# Keylogger Simple
+Script básico en Python para registrar pulsaciones de teclado.
 
-## 📌 Descripción
-Este proyecto es una aplicación en Python que captura eventos de teclado.  
-Registra las teclas presionadas junto con la fecha y hora en un archivo de texto.
+## Uso
+1. Instalar librería: `pip install pynput`
+2. Ejecutar: `python main.py`
+3. Los resultados aparecerán en `log.txt`.
 
-
-## 🛠️ Se debe usar
-- Python 3
-- pynput
-
-## 📦 Instalación
-
-Instalar dependencias:
-
-```bash
-pip install -r requirements.txt
+## Nota
+Uso exclusivo para pruebas personales y aprendizaje.
